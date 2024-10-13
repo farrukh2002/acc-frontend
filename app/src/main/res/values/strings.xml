@@ -1,0 +1,67 @@
+<resources>
+    <string name="need_root_permission">Need root permission!</string>
+    <string name="initializing">Initializing…</string>
+    <string name="installed_incompatible">Installed %s\nIncompatible</string>
+    <string name="installed_possibly_incompatible">Installed %s\nPossibly incompatible</string>
+    <string name="command_failed">Command failed</string>
+
+    <string name="daemon">Daemon</string>
+    <string name="configuration">Configuration</string>
+
+    <string name="about">About</string>
+
+    <string name="acc_settings">ACC Settings</string>
+    <string name="acc">ACC</string>
+    <string name="battery">Battery</string>
+    <string name="capacity">Capacity</string>
+    <string name="temperature">Temperature</string>
+    <string name="current">Current</string>
+    <string name="voltage">Voltage</string>
+    <string name="power">Power</string>
+
+    <!-- Percentage Settings -->
+    <string name="shutdown_below">Shutdown below</string>
+    <string name="cooldown_above">Cooldown above</string>
+    <string name="charge_below">Charge below</string>
+    <string name="pause_above">Pause above</string>
+    <string name="read_from_kernel">Read from kernel</string>
+    <string name="pause_as_full">Pause as full</string>
+
+    <!-- Temperature Settings -->
+    <string name="support_in_voltage">Support in voltage</string>
+    <string name="shutdown_above">Shutdown above</string>
+    <string name="cooldown_cycle">Cooldown cycle</string>
+    <string name="charge_period">Charge period</string>
+    <string name="cooldown_period">Cooldown period</string>
+    <string name="cooldown_current">Cooldown current</string>
+    <string name="custom">Custom</string>
+    <string name="max_charging_current">Max charging current</string>
+    <string name="max_charging_voltage">Max charging voltage</string>
+    <string name="charging_switch">Charging switch</string>
+    <string name="idle_mode_first">Idle mode first</string>
+    <string name="statistics">Statistics</string>
+    <string name="reset_on_pause">Reset on pause</string>
+    <string name="reset_on_unplug">Reset on unplug</string>
+    <string name="miscellaneous">Miscellaneous</string>
+    <string name="strict_current_control">Strict current control</string>
+    <string name="properties">Properties</string>
+    <string name="apply_on_boot">Apply on boot</string>
+    <string name="apply_on_plug">Apply on plug</string>
+    <string name="commands">Commands</string>
+    <string name="run_on_pause">Run on pause</string>
+    <string name="loop">Loop</string>
+    <string name="unit_multipliers">Unit multipliers</string>
+    <string name="ampere_factor">Ampere factor</string>
+    <string name="volt_factor">Volt factor</string>
+
+    <string name="hint_between">Between %d and %d!</string>
+    <string name="hint_capacity_shutdown">Only valid when discharging and running more than 15 minutes.</string>
+    <string name="hint_cooldown">Periodically charge and pause.\nReduce damage from prolonged high temperature and voltage.</string>
+    <string name="hint_prevent_shutdown">Also prevent shutdown.</string>
+    <string name="hint_period">Second(s) during each cycle</string>
+    <string name="hint_charge_period">Cooldown disabled if unset.\n50 suggested if set.</string>
+    <string name="hint_cooldown_period">Pause (or limit if set cooldown current) charging during each cycle.\nCooldown disabled if unset.\n10 suggested if set.\nTurn down if charge too slow.</string>
+    <string name="hint_cooldown_current">Limit charging instead of pausing during cooldown period.</string>
+    <string name="hint_idle_mode">Incompatible with some Samsung and other devices.</string>
+    <string name="hint_strict_current_control">Only use control files match \"batt\".\nNeed if current limit affects both input and charging current.</string>
+</resources>
