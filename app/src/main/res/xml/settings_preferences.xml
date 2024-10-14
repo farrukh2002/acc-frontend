@@ -31,28 +31,28 @@
             app:key="@string/info_temp"
             app:persistent="false"
             app:selectable="false"
-            app:summary="%s °C"
+            app:summary="%s"
             app:title="@string/temperature" />
         <EditTextPreferencePlus
             app:formatSummary="true"
             app:key="@string/info_current_now"
             app:persistent="false"
             app:selectable="false"
-            app:summary="%s A"
+            app:summary="%s"
             app:title="@string/current" />
         <EditTextPreferencePlus
             app:formatSummary="true"
             app:key="@string/info_voltage_now"
             app:persistent="false"
             app:selectable="false"
-            app:summary="%s V"
+            app:summary="%s"
             app:title="@string/voltage" />
         <EditTextPreferencePlus
             app:formatSummary="true"
             app:key="@string/info_power_now"
             app:persistent="false"
             app:selectable="false"
-            app:summary="%s W"
+            app:summary="%s"
             app:title="@string/power" />
     </PreferenceCategory>
     <PreferenceCategory

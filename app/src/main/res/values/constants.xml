@@ -6,7 +6,7 @@
     <!--battery info-->
     <string name="info_status">status</string>
     <string name="info_capacity">level</string>
-    <string name="info_temp">TEMP</string>
+    <string name="info_temp">temp</string>
     <string name="info_current_now">current_now</string>
     <string name="info_voltage_now">voltage_now</string>
     <string name="info_power_now">power_now</string>
