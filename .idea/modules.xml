@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AccSettings.iml" filepath="$PROJECT_DIR$/.idea/modules/AccSettings.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AccSettings.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AccSettings.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AccSettings.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AccSettings.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AccSettings.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AccSettings.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AccSettings.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AccSettings.app.unitTest.iml" />
+    </modules>
+  </component>
+</project>
