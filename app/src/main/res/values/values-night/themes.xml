@@ -1,0 +1,4 @@
+<!-- values-night/themes.xml -->
+<resources>
+    <style name="Theme.MyApp" parent="Theme.MyApp.Dark"/>
+</resources>

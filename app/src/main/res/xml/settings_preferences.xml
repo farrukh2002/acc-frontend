@@ -6,9 +6,10 @@
         app:key="@string/acc"
         app:persistent="false"
         app:title="@string/acc">
-        <SwitchPreference
+        <SwitchPreferenceCompat
             app:key="@string/acc_daemon"
-            app:title="@string/daemon" />
+            app:title="@string/daemon"
+            app:useSimpleSummaryProvider="true" />
         <Preference
             app:fragment="crazyboyfeng.accSettings.fragment.ConfigFragment"
             app:title="@string/configuration" />

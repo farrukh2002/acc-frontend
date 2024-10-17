@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.topjohnwu.libsu:core:4.0.0@aar" external-system-id="GRADLE">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-4/9b0a6c7fd633bc4211e4b0221bab1bd5/transformed/core-4.0.0/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-4/9b0a6c7fd633bc4211e4b0221bab1bd5/transformed/core-4.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-4/9b0a6c7fd633bc4211e4b0221bab1bd5/transformed/core-4.0.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.topjohnwu.libsu/core/4.0.0/6480410f7383b47ea7183d583cfdabe6ee48f342/core-4.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

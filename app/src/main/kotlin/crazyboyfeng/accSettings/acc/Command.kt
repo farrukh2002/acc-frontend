@@ -53,7 +53,7 @@ object Command {
 
     private suspend fun execAcc(vararg options: String): String {
         val command = buildString {
-            append("/dev/.vr25/acc/acca")
+            append("/dev/.vr25/acc/acc")
             for (option in options) {
                 append(" --")
                 append(option)
@@ -75,14 +75,12 @@ object Command {
 
     suspend fun getDefaultConfig(): Properties {
         val properties = Properties()
-        @Suppress("BlockingMethodInNonBlockingContext")
         properties.load(execAcc("set", "print-default").reader())
         return properties
     }
 
     suspend fun getInfo(): Properties {
         val properties = Properties()
-        @Suppress("BlockingMethodInNonBlockingContext")
         properties.load(execAcc("info").reader())
         return properties
     }

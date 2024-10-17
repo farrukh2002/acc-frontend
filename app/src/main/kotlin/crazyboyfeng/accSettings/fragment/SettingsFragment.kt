@@ -1,11 +1,16 @@
 package crazyboyfeng.accSettings.fragment
 
 import android.os.Bundle
+import android.view.View
 import android.util.Log
+import android.view.LayoutInflater
+//import android.view.MenuInflater
+import android.view.ViewGroup
 import androidx.lifecycle.lifecycleScope
 import androidx.preference.EditTextPreferencePlus
 import androidx.preference.Preference
 import androidx.preference.PreferenceCategory
+import androidx.preference.SwitchPreferenceCompat
 import crazyboyfeng.accSettings.R
 import crazyboyfeng.accSettings.acc.AccHandler
 import crazyboyfeng.accSettings.acc.Command
@@ -17,10 +22,25 @@ import kotlinx.coroutines.isActive
 class SettingsFragment : PreferenceFragmentCompat() {
     private lateinit var accPreferenceCategory: PreferenceCategory
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
+        setPreferencesFromResource(R.xml.settings_preferences, rootKey)
+
+        val switchboard = findPreference<SwitchPreferenceCompat>("@string/dark_mode")
+        if (switchboard == null) {
+            Log.d("SettingsFragment", "not Found")
+        } else {
+            switchboard.setOnPreferenceChangeListener { _, _ ->
+                Log.d("SettingsFragment", "dark mode changed")
+                true
+            }
+        }
         reload()
         checkAcc()
     }
 
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+        val view= super.onCreateView(inflater, container, savedInstanceState)
+        return view
+    }
     private fun reload() {
         setPreferencesFromResource(R.xml.settings_preferences, null)
         accPreferenceCategory = findPreference(getString(R.string.acc))!!

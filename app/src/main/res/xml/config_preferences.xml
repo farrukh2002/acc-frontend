@@ -1,10 +1,9 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:title="@string/configuration">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--Capacity Settings-->
     <PreferenceCategory
         app:iconSpaceReserved="false"
-        app:initialExpandedChildrenCount="4"
-        app:title="@string/capacity">
+        app:title="@string/capacity" >
         <NumberPickerPreference
             app:dialogMessage="@string/hint_capacity_shutdown"
             app:key="@string/set_shutdown_capacity"
@@ -19,7 +18,7 @@
         <NumberPickerPreference
             app:key="@string/set_pause_capacity"
             app:title="@string/pause_above" />
-        <SwitchPreference
+        <SwitchPreferenceCompat
             app:key="@string/set_capacity_sync"
             app:summary="@string/hint_prevent_shutdown"
             app:title="@string/read_from_kernel" />
@@ -58,7 +57,6 @@
     </PreferenceCategory>
     <PreferenceCategory
         app:iconSpaceReserved="false"
-        app:initialExpandedChildrenCount="3"
         app:title="@string/cooldown_cycle">
         <EditTextPreferencePlus
             android:hint="@string/hint_period"
@@ -79,10 +77,9 @@
             app:summary="%s s"
             app:title="@string/cooldown_period" />
         <EditTextPreferencePlus
-            android:hint="(mA)"
+            android:hint="Put value in (mA)"
             android:inputType="number"
             android:maxLength="4"
-            app:dependency="@string/set_cooldown_pause"
             app:dialogMessage="@string/hint_cooldown_current"
             app:formatSummary="true"
             app:key="@string/set_cooldown_current"
@@ -105,7 +102,7 @@
             app:summary="%s mA"
             app:title="@string/max_charging_current" />
         <EditTextPreferencePlus
-            android:hint="(mV)"
+            android:hint="Put Value in (mV)"
             android:inputType="number"
             android:maxLength="4"
             app:formatSummary="true"
@@ -115,7 +112,6 @@
     </PreferenceCategory>
     <PreferenceCategory
         app:iconSpaceReserved="false"
-        app:initialExpandedChildrenCount="1"
         app:title="@string/charging_switch">
         <SwitchPreference
             app:key="@string/set_prioritize_batt_idle_mode"
@@ -138,7 +134,6 @@
     </PreferenceCategory>
     <PreferenceCategory
         app:iconSpaceReserved="false"
-        app:initialExpandedChildrenCount="1"
         app:title="@string/miscellaneous">
         <SwitchPreference
             app:key="@string/set_current_workaround"

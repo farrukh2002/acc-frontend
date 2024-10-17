@@ -6,12 +6,12 @@ plugins {
 android {
     namespace = "crazyboyfeng.accSettings"
     //noinspection GradleDependency
-    compileSdk = 32
+    compileSdk = 34
     defaultConfig {
         applicationId = "crazyboyfeng.accSettings"
-        minSdk = 14
+        minSdk = 26
         //noinspection ExpiredTargetSdkVersion
-        targetSdk = 32
+        targetSdk = 34
         versionCode = 202406020
         versionName = "Dev-0.3.3-Pre"
 //        testInstrumentationRunner = "android.support.test.runner.AndroidJUnitRunner"
@@ -33,12 +33,11 @@ android {
 
 dependencies {
 //    implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
+    implementation("androidx.preference:preference-ktx:1.2.1")
+    implementation("androidx.work:work-runtime:2.9.1")
     //noinspection GradleDependency
-    implementation("androidx.preference:preference-ktx:1.2.0")
-    //noinspection GradleDependency
-    implementation("androidx.work:work-runtime:2.7.1")
-    implementation("com.github.topjohnwu.libsu:core:3.2.1")
-    val axpeVersion = "0.9.0"
+    implementation("com.github.topjohnwu.libsu:core:4.0.0")
+   val axpeVersion = "0.9.0"
     implementation("com.github.CrazyBoyFeng.AndroidXPreferenceExtensions:edittext:$axpeVersion")
     implementation("com.github.CrazyBoyFeng.AndroidXPreferenceExtensions:numberpicker:$axpeVersion")
 //    testImplementation("junit:junit:4.13.2")

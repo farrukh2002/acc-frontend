@@ -1,0 +1,8 @@
+<resources>
+    <style name="Theme.MyApp.Light" parent="Theme.AppCompat.Light">
+        <!-- Customize your light theme here -->
+    </style>
+    <style name="Theme.MyApp.Dark" parent="Theme.AppCompat.Light">
+        <!-- Customize your dark theme here -->
+    </style>
+</resources>

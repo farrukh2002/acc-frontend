@@ -1,7 +1,11 @@
 package crazyboyfeng.accSettings.fragment
 
+import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.Button
 import androidx.core.widget.doOnTextChanged
 import androidx.lifecycle.lifecycleScope

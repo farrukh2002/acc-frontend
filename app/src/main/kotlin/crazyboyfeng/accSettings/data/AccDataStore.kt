@@ -13,6 +13,8 @@ class AccDataStore(private val context: Context) : PreferenceDataStore() {
         return runBlocking {
             when (key) {
                 context.getString(R.string.acc_daemon) -> Command.isDaemonRunning()
+                context.getString(R.string.dark_mode) -> context.getSharedPreferences(
+                    SHARED_PREFS_NAME,Context.MODE_PRIVATE).getBoolean(key, defValue)
                 else -> super.getBoolean(key, defValue)
             }
         }
@@ -23,12 +25,18 @@ class AccDataStore(private val context: Context) : PreferenceDataStore() {
         CoroutineScope(Dispatchers.Default).launch {
             when (key) {
                 context.getString(R.string.acc_daemon) -> Command.setDaemonRunning(value)
+                context.getString(R.string.dark_mode) ->
+                    context.getSharedPreferences(SHARED_PREFS_NAME, Context.MODE_PRIVATE)
+                        .edit()
+                        .putBoolean(key, value)
+                        .apply()
                 else -> super.putBoolean(key, value)
             }
         }
     }
 
     private companion object {
+        const val SHARED_PREFS_NAME = "acc_settings"
         const val TAG = "AccDataStore"
     }
 }
