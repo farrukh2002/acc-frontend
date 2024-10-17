@@ -13,7 +13,7 @@ android {
         //noinspection ExpiredTargetSdkVersion
         targetSdk = 34
         versionCode = 202406020
-        versionName = "Dev-0.3.3-Pre"
+        versionName = "Dev-0.3.6-Pre"
 //        testInstrumentationRunner = "android.support.test.runner.AndroidJUnitRunner"
         resValue("string", "version_name", versionName!!)
     }
