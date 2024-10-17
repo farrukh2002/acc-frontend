@@ -16,7 +16,7 @@ Simple UI for [Advanced Charging Controller](https://github.com/VR-25/acc).
     - **Charging Switch** Set Individual Charging Switch if you know the variable.
 
 > [!TIP]
-> It may take 5-10 seconds for the deamo and the configuration page to work. WIP.
+> It may take 5-10 seconds for the demo and the configuration page to work. WIP.
 > 
 > Some Devices use (-)ve current calculation methods. If you see the Current/Power as Negative, Do not fret. WIP.
 ### Not Tested
