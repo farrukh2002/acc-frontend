@@ -1,0 +1,15 @@
+<resources>
+    <style name="CustomPreferenceText" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+    </style>
+
+    <style name="CustomPreferenceCategory" parent="Preference.Category">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">?attr/colorPrimary</item>
+    </style>
+
+    <style name="Preference.SwitchPreferenceCompat.Material3" parent="@style/Preference.SwitchPreferenceCompat">
+        <item name="android:widgetLayout">@layout/preference_switch_material3</item>
+    </style>
+</resources>

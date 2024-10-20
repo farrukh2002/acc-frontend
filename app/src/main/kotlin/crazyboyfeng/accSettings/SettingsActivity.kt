@@ -1,8 +1,7 @@
 package crazyboyfeng.accSettings
 
 import android.os.Bundle
-import android.view.Gravity
-import android.widget.TextView
+import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.ContentFrameLayout
 import androidx.fragment.app.Fragment
@@ -14,29 +13,25 @@ import crazyboyfeng.accSettings.fragment.SettingsFragment
 class SettingsActivity : AppCompatActivity(),
     PreferenceFragmentCompat.OnPreferenceStartFragmentCallback {
     override fun onCreate(savedInstanceState: Bundle?) {
+        setTheme(R.style.Theme_MyApp_Preferences)
         super.onCreate(savedInstanceState)
         if (!Shell.rootAccess()) {
-            val textView = TextView(this)
-            textView.apply {
-                gravity = Gravity.CENTER
-                textSize = 24f
-                setPadding(0, 100, 0, 0)
-                setTextColor(0xffff0000.toInt())
-                text = getString(R.string.need_root_permission)
-            }
+            val noRootView = LayoutInflater.from(this).inflate(R.layout.no_root, null)
             val contentFrameLayout = findViewById<ContentFrameLayout>(android.R.id.content)
-            contentFrameLayout.addView(textView)
+            contentFrameLayout.addView(noRootView)
             return
         }
-        supportFragmentManager.addOnBackStackChangedListener {
-            val preferenceFragment =
-                supportFragmentManager.findFragmentById(android.R.id.content) as PreferenceFragmentCompat
-            supportActionBar?.subtitle = preferenceFragment.preferenceScreen.title
+        else {
+            supportFragmentManager.addOnBackStackChangedListener {
+                val preferenceFragment =
+                    supportFragmentManager.findFragmentById(android.R.id.content) as PreferenceFragmentCompat
+                supportActionBar?.subtitle = preferenceFragment.preferenceScreen.title
+            }
+            supportFragmentManager
+                .beginTransaction()
+                .replace(android.R.id.content, SettingsFragment())
+                .commit()
         }
-        supportFragmentManager
-            .beginTransaction()
-            .replace(android.R.id.content, SettingsFragment())
-            .commit()
     }
 
     // In SettingsActivity.kt

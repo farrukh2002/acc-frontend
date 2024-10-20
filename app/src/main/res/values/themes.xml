@@ -1,8 +1,15 @@
 <resources>
-    <style name="Theme.MyApp.Light" parent="Theme.AppCompat.Light">
-        <!-- Customize your light theme here -->
+    <style name="Theme.MyApp.Preferences" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay.v3.Material3</item>
+        <item name="switchPreferenceCompatStyle">@style/Preference.SwitchPreferenceCompat.Material3</item>
+        <item name="android:textAppearance">@style/CustomPreferenceText</item>
     </style>
-    <style name="Theme.MyApp.Dark" parent="Theme.AppCompat.Light">
-        <!-- Customize your dark theme here -->
+
+    <style name="PreferenceThemeOverlay.v3.Material3" parent="ThemeOverlay.Material3" />
+
+    <style name="Default" parent="Theme.AppCompat.Light.DarkActionBar"/>
+    <style name="NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
 </resources>

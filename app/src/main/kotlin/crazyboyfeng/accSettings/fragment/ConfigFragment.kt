@@ -14,18 +14,18 @@ import crazyboyfeng.accSettings.R
 import crazyboyfeng.accSettings.acc.Command
 import crazyboyfeng.accSettings.data.ConfigDataStore
 import crazyboyfeng.android.preference.PreferenceFragmentCompat
+import crazyboyfeng.android.preference.EditTextPreferenceDialogFragmentCompatPlus
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-@Suppress("unused")
 class ConfigFragment : PreferenceFragmentCompat() {
     private lateinit var shutdownCapacity: NumberPickerPreference
     private lateinit var cooldownCapacity: NumberPickerPreference
     private lateinit var resumeCapacity: NumberPickerPreference
     private lateinit var pauseCapacity: NumberPickerPreference
-    private lateinit var capacityMask: SwitchPreference
-    private lateinit var supportInVoltage: SwitchPreference
+    private lateinit var capacityMask: SwitchPreferenceCompat
+    private lateinit var supportInVoltage: SwitchPreferenceCompat
     private lateinit var cooldownTemp: NumberPickerPreference
     private lateinit var maxTemp: NumberPickerPreference
     private lateinit var shutdownTemp: NumberPickerPreference
@@ -33,9 +33,9 @@ class ConfigFragment : PreferenceFragmentCompat() {
     private lateinit var cooldownPause: EditTextPreferencePlus
     private lateinit var cooldownCustom: EditTextPreference
     private lateinit var maxChargingVoltage: EditTextPreferencePlus
-    private lateinit var prioritizeBattIdleMode: SwitchPreference
+    private lateinit var prioritizeBattIdleMode: SwitchPreferenceCompat
     private lateinit var chargingSwitch: EditTextPreference
-    private lateinit var currentWorkaround: SwitchPreference
+    private lateinit var currentWorkaround: SwitchPreferenceCompat
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         val configDataStore = ConfigDataStore(requireContext())
         preferenceManager.preferenceDataStore = configDataStore

@@ -1,16 +1,17 @@
 plugins {
-    id("com.android.application")
-    kotlin("android")
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.compose)
 }
 
 android {
     namespace = "crazyboyfeng.accSettings"
-    //noinspection GradleDependency
     compileSdk = 34
+
     defaultConfig {
         applicationId = "crazyboyfeng.accSettings"
         minSdk = 26
-        //noinspection ExpiredTargetSdkVersion
+        //noinspection OldTargetApi
         targetSdk = 34
         versionCode = 202406020
         versionName = "Dev-0.3.6-Pre"
@@ -28,18 +29,44 @@ android {
             )
         }
     }
-    kotlinOptions { jvmTarget = "1.8" }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = "11"
+    }
+    buildFeatures {
+        compose = true
+        viewBinding = true
+    }
 }
 
 dependencies {
-//    implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
-    implementation("androidx.preference:preference-ktx:1.2.1")
-    implementation("androidx.work:work-runtime:2.9.1")
+
+    implementation(libs.androidx.preference.ktx)
+    implementation(libs.androidx.preference)
+    implementation(libs.androidx.work.runtime.ktx)
+    implementation(libs.androidx.material3)
+    implementation(libs.material)
     //noinspection GradleDependency
-    implementation("com.github.topjohnwu.libsu:core:4.0.0")
-   val axpeVersion = "0.9.0"
-    implementation("com.github.CrazyBoyFeng.AndroidXPreferenceExtensions:edittext:$axpeVersion")
-    implementation("com.github.CrazyBoyFeng.AndroidXPreferenceExtensions:numberpicker:$axpeVersion")
+    implementation(libs.topjohnwusu)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.androidx.activity.compose)
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.androidx.ui)
+    implementation(libs.androidx.ui.graphics)
+    implementation(libs.androidx.ui.tooling.preview)
+    androidTestImplementation(platform(libs.androidx.compose.bom))
+    androidTestImplementation(libs.androidx.ui.test.junit4)
+    implementation(libs.edittext)
+    implementation(libs.numberpicker)
+    debugImplementation(libs.androidx.ui.tooling)
+    debugImplementation(libs.androidx.ui.test.manifest)
 //    testImplementation("junit:junit:4.13.2")
 //    androidTestImplementation("androidx.test.ext:junit:1.1.3")
 //    androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")

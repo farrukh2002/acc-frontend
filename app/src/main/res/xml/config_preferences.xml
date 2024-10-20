@@ -22,11 +22,11 @@
             app:key="@string/set_capacity_sync"
             app:summary="@string/hint_prevent_shutdown"
             app:title="@string/read_from_kernel" />
-        <SwitchPreference
+        <SwitchPreferenceCompat
             app:key="@string/set_capacity_mask"
             app:summary="@string/hint_prevent_shutdown"
             app:title="@string/pause_as_full" />
-        <SwitchPreference
+        <SwitchPreferenceCompat
             app:key="@string/support_in_voltage"
             app:title="@string/support_in_voltage" />
     </PreferenceCategory>
@@ -113,7 +113,7 @@
     <PreferenceCategory
         app:iconSpaceReserved="false"
         app:title="@string/charging_switch">
-        <SwitchPreference
+        <SwitchPreferenceCompat
             app:key="@string/set_prioritize_batt_idle_mode"
             app:summary="@string/hint_idle_mode"
             app:title="@string/idle_mode_first" />
@@ -125,17 +125,17 @@
         app:iconSpaceReserved="false"
         app:title="@string/statistics">
         <!--todo what?-->
-        <SwitchPreference
+        <SwitchPreferenceCompat
             app:key="@string/set_reset_batt_stats_on_pause"
             app:title="@string/reset_on_pause" />
-        <SwitchPreference
+        <SwitchPreferenceCompat
             app:key="@string/set_reset_batt_stats_on_unplug"
             app:title="@string/reset_on_unplug" />
     </PreferenceCategory>
     <PreferenceCategory
         app:iconSpaceReserved="false"
         app:title="@string/miscellaneous">
-        <SwitchPreference
+        <SwitchPreferenceCompat
             app:key="@string/set_current_workaround"
             app:summary="@string/hint_strict_current_control"
             app:title="@string/strict_current_control" />

@@ -51,7 +51,7 @@ class AccHandler {
             if (bundledVersionCode <= installedVersionCode) {
                 return
             }
-        } catch (e: Command.AccException) {
+        } catch (_: Command.AccException) {
 //            e.printStackTrace()
         }
         install(context)

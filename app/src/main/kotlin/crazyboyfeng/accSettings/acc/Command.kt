@@ -53,13 +53,13 @@ object Command {
 
     private suspend fun execAcc(vararg options: String): String {
         val command = buildString {
-            append("/dev/.vr25/acc/acc")
+            append("/dev/.vr25/acc/acca")
             for (option in options) {
                 append(" --")
                 append(option)
             }
         }
-        Log.d("Command", "Executing Command: $command")
+        Log.d(TAG, "Executing Command: $command")
         return exec(command)
     }
 
@@ -101,9 +101,9 @@ object Command {
 
     private suspend fun setDaemon(option: String) = try {
         execAcc("daemon $option")
-    } catch (e: DaemonExistsException) {
+    } catch (_: DaemonExistsException) {
         Log.i(TAG, "daemon exists")
-    } catch (e: DaemonNotExistsException) {
+    } catch (_: DaemonNotExistsException) {
         Log.i(TAG, "daemon not exists")
     }
 
@@ -113,7 +113,7 @@ object Command {
     suspend fun isDaemonRunning(): Boolean = try {
         execAcc("daemon")
         true
-    } catch (e: DaemonNotExistsException) {
+    } catch (_: DaemonNotExistsException) {
         false
     }
 

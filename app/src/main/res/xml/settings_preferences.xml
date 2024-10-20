@@ -1,90 +1,115 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <PreferenceCategory
         app:enabled="false"
         app:iconSpaceReserved="false"
         app:key="@string/acc"
         app:persistent="false"
         app:title="@string/acc">
+
         <SwitchPreferenceCompat
             app:key="@string/acc_daemon"
             app:title="@string/daemon"
-            app:useSimpleSummaryProvider="true" />
-        <Preference
+            app:summary=""/>
+
+        <crazyboyfeng.accSettings.fragment.CustomPreference
             app:fragment="crazyboyfeng.accSettings.fragment.ConfigFragment"
-            app:title="@string/configuration" />
+            app:title="@string/configuration"
+             />
+
     </PreferenceCategory>
+
     <PreferenceCategory
         app:iconSpaceReserved="true"
         app:isPreferenceVisible="true"
         app:key="@string/info_status"
         app:persistent="false"
         app:title="@string/battery">
-        <EditTextPreferencePlus
+
+        <crazyboyfeng.accSettings.fragment.CustomEditTextPreference
             app:formatSummary="true"
             app:key="@string/info_capacity"
             app:persistent="false"
             app:selectable="false"
             app:summary="%s"
-            app:title="@string/capacity" />
-        <EditTextPreferencePlus
+            app:title="@string/capacity"
+             />
+
+        <crazyboyfeng.accSettings.fragment.CustomEditTextPreference
             app:formatSummary="true"
             app:key="@string/info_temp"
             app:persistent="false"
             app:selectable="false"
             app:summary="%s"
-            app:title="@string/temperature" />
-        <EditTextPreferencePlus
+            app:title="@string/temperature"
+             />
+
+        <crazyboyfeng.accSettings.fragment.CustomEditTextPreference
             app:formatSummary="true"
             app:key="@string/info_current_now"
             app:persistent="false"
             app:selectable="false"
             app:summary="%s"
-            app:title="@string/current" />
-        <EditTextPreferencePlus
+            app:title="@string/current"
+             />
+
+        <crazyboyfeng.accSettings.fragment.CustomEditTextPreference
             app:formatSummary="true"
             app:key="@string/info_voltage_now"
             app:persistent="false"
             app:selectable="false"
             app:summary="%s"
-            app:title="@string/voltage" />
-        <EditTextPreferencePlus
+            app:title="@string/voltage"
+             />
+
+        <crazyboyfeng.accSettings.fragment.CustomEditTextPreference
             app:formatSummary="true"
             app:key="@string/info_power_now"
             app:persistent="false"
             app:selectable="false"
             app:summary="%s"
-            app:title="@string/power" />
+            app:title="@string/power"
+             />
+
     </PreferenceCategory>
+
     <PreferenceCategory
         app:iconSpaceReserved="false"
         app:title="About the App">
+
         <Preference
             app:summary="@string/version_name"
-            app:title="@string/acc_settings">
-        </Preference>
+            app:title="@string/acc_settings"
+             />
+
         <Preference
             app:summary="@string/acc_version_name"
-            app:title="@string/acc">
+            app:title="@string/acc"
+            >
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="https://github.com/VR-25/acc" />
         </Preference>
+
         <Preference
             app:summary="Farrukh2002"
-            app:title="Developer">
+            app:title="Developer"
+            >
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="https://github.com/farrukh2002" />
         </Preference>
+
         <Preference
             app:summary="CrazyBoyFeng"
-            app:title="Special Thanks">
+            app:title="Special Thanks"
+            >
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="https://github.com/CrazyBoyFeng/AccSettings" />
         </Preference>
 
-        <!--TODO auto upload logs switch? or manually?-->
     </PreferenceCategory>
+
 </PreferenceScreen>
